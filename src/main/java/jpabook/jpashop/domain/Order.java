@@ -25,10 +25,12 @@ public class Order {
     private List<OrderItem> orderItems = new ArrayList<>();
 
     @OneToOne
+    @JoinColumn(name = "delivery_id")
     private Delivery delivery;
 
     private LocalDateTime orderDate;
 
+    @Enumerated(EnumType.STRING)
     private OrderStatus status;
 
 }
