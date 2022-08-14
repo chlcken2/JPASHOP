@@ -28,7 +28,6 @@ public class ItemService {
         findItem.setPrice(book.getPrice());
         findItem.setName(book.getName());
         findItem.setStockQuantity(book.getStockQuantity());
-
     }
     public List<Item> findItems() {
         return itemRepository.findAll();
